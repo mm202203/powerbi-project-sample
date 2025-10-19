@@ -1,0 +1,25 @@
+table 製品
+	lineageTag: b2671d81-f275-4e65-b401-5e41eaed38c4
+
+	column Product
+		dataType: string
+		lineageTag: bc2c1e1a-6b0a-486e-959e-bc1c91277511
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 製品 = m
+		mode: import
+		source =
+				let
+				    ソース = 財務,
+				    削除された他の列 = Table.SelectColumns(ソース,{"Product"}),
+				    削除された重複 = Table.Distinct(削除された他の列)
+				in
+				    削除された重複
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Table
+

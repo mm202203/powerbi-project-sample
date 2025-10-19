@@ -1,0 +1,21 @@
+relationship AutoDetected_80b45b1a-7b0f-4496-a3e9-f40dc2d685b8
+	fromColumn: 財務.Segment
+	toColumn: セグメント.Segment
+
+relationship AutoDetected_1f9b0320-9d48-46a4-bbba-25ae898da642
+	fromColumn: 財務.Country
+	toColumn: 国.Country
+
+relationship AutoDetected_f8f30d42-8162-4381-b9f4-6124d90878eb
+	fromColumn: 財務.Product
+	toColumn: 製品.Product
+
+relationship daf69905-acce-44a5-be25-2d541e2ae7c1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 日付.Date
+	toColumn: LocalDateTable_9e3efeff-4a51-42fb-b5ef-23a4d1a97eda.Date
+
+relationship acc2edb4-0be6-0dcf-9b1b-1e3e8e409169
+	fromColumn: 財務.Date
+	toColumn: 日付.Date
+

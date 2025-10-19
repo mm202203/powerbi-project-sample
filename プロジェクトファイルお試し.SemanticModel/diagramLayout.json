@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 961.48511266118908,
+            "y": 210.77984045843323
+          },
+          "nodeIndex": "セグメント",
+          "nodeLineageTag": "02f1a404-ff1c-400e-87b2-39a2ca2bfb8d",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 164.2410677257576,
+            "y": 517.15711822408207
+          },
+          "nodeIndex": "国",
+          "nodeLineageTag": "99ef064f-a477-4ae7-ae9e-02281f73c6e0",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 426.08785225800335,
+            "y": 65.027823120154949
+          },
+          "nodeIndex": "財務",
+          "nodeLineageTag": "671564c8-2c7a-46f9-bc99-745d4ee5e71f",
+          "size": {
+            "height": 315.69637109796849,
+            "width": 305.75483930499854
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 76.908064739374453,
+            "y": 187.5211086921378
+          },
+          "nodeIndex": "製品",
+          "nodeLineageTag": "b2671d81-f275-4e65-b401-5e41eaed38c4",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 741.41152018424509,
+            "y": 521.47674696789466
+          },
+          "nodeIndex": "日付",
+          "nodeLineageTag": "d887fae6-47fb-4fc3-b031-55a60e0bd0c3",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "すべてのテーブル",
+      "zoomValue": 89.192590520569482,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "すべてのテーブル",
+  "defaultDiagram": "すべてのテーブル"
+}

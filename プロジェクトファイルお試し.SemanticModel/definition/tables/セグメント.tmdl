@@ -1,0 +1,25 @@
+table セグメント
+	lineageTag: 02f1a404-ff1c-400e-87b2-39a2ca2bfb8d
+
+	column Segment
+		dataType: string
+		lineageTag: d307643d-5ef0-4883-affe-dcd3dd8a1721
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition セグメント = m
+		mode: import
+		source =
+				let
+				    ソース = 財務,
+				    削除された他の列 = Table.SelectColumns(ソース,{"Segment"}),
+				    削除された重複 = Table.Distinct(削除された他の列)
+				in
+				    削除された重複
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Table
+

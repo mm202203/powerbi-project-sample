@@ -1,0 +1,24 @@
+model Model
+	culture: ja-JP
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ja-JP
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["財務","国","セグメント","製品"]
+
+ref table 財務
+ref table DateTableTemplate_ce63ff46-9996-40bf-a324-cfe495bce11b
+ref table 国
+ref table セグメント
+ref table 製品
+ref table 日付
+ref table LocalDateTable_9e3efeff-4a51-42fb-b5ef-23a4d1a97eda
+
+ref cultureInfo ja-JP
+

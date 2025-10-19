@@ -1,0 +1,83 @@
+table 日付
+	lineageTag: d887fae6-47fb-4fc3-b031-55a60e0bd0c3
+
+	column Date
+		formatString: General Date
+		lineageTag: 9a9b006b-61f9-485c-b4e2-b48ca43a7142
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation バリエーション
+			isDefault
+			relationship: daf69905-acce-44a5-be25-2d541e2ae7c1
+			defaultHierarchy: LocalDateTable_9e3efeff-4a51-42fb-b5ef-23a4d1a97eda.日付の階層
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: fc1b71e6-c4d3-432d-8f7c-9db1b96e7cba
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: c46a6bff-20eb-4b55-8da8-737a3b75e89a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		formatString: 0
+		lineageTag: 0a1ec1a7-cbde-4bf2-ae68-ef840cc13b5d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MonthNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		formatString: 0
+		lineageTag: 18f60b75-2937-4e4a-84d2-7ebbb2124022
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		lineageTag: cdaa281b-4240-4b9b-9402-e41ed03d0d7b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 2ce9891d-ff06-41d2-84f6-67d482f2e7ff
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 日付 = calculated
+		mode: import
+		source =
+				ADDCOLUMNS(
+				    CALENDARAUTO(),
+				    "Year", YEAR([Date]),
+				    "Month", FORMAT([Date], "MM月"),
+				    "MonthNumber", MONTH([Date]),
+				    "Day", DAY([Date]),
+				    "Weekday", FORMAT([Date], "dddd"),
+				    "Quarter", "Q" & QUARTER([Date])
+				)
+
+	annotation PBI_Id = 2635118e6678496ab841eead94a081bb
+

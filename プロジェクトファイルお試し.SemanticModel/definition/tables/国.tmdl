@@ -1,0 +1,25 @@
+table 国
+	lineageTag: 99ef064f-a477-4ae7-ae9e-02281f73c6e0
+
+	column Country
+		dataType: string
+		lineageTag: 90dca99d-58d5-4e1a-b6d3-e37d4e862408
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 国 = m
+		mode: import
+		source =
+				let
+				    ソース = 財務,
+				    削除された他の列 = Table.SelectColumns(ソース,{"Country"}),
+				    削除された重複 = Table.Distinct(削除された他の列)
+				in
+				    削除された重複
+
+	annotation PBI_NavigationStepName = ナビゲーション
+
+	annotation PBI_ResultType = Table
+
