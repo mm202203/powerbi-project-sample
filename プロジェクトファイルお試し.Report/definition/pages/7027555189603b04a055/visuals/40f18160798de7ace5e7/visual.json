@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "40f18160798de7ace5e7",
+  "position": {
+    "x": 1493.1610879143695,
+    "y": 0,
+    "z": 4001,
+    "height": 549.80737733281046,
+    "width": 465.88940921359205,
+    "tabOrder": 4001
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "財務"
+                    }
+                  },
+                  "Property": "売上単価"
+                }
+              },
+              "queryRef": "財務.売上単価",
+              "nativeQueryRef": "売上単価"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "財務"
+                    }
+                  },
+                  "Property": "利益単価"
+                }
+              },
+              "queryRef": "財務.利益単価",
+              "nativeQueryRef": "利益単価"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "財務"
+                  }
+                },
+                "Property": "売上単価"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5850cb90c7a6688c2418",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "財務"
+              }
+            },
+            "Property": "売上単価"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a0ebd792728403d7ae06",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "財務"
+              }
+            },
+            "Property": "利益単価"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

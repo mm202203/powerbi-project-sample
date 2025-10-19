@@ -1,0 +1,164 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "880f8667090421b20910",
+  "position": {
+    "x": 781.30522042030964,
+    "y": 700.28097533968491,
+    "z": 4002,
+    "height": 601.89439202749782,
+    "width": 1105.4022007428084,
+    "tabOrder": 4002
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "日付"
+                    }
+                  },
+                  "Property": "Year"
+                }
+              },
+              "queryRef": "日付.Year",
+              "nativeQueryRef": "Year",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "日付"
+                    }
+                  },
+                  "Property": "Month"
+                }
+              },
+              "queryRef": "日付.Month",
+              "nativeQueryRef": "Month",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "財務"
+                    }
+                  },
+                  "Property": "売上単価"
+                }
+              },
+              "queryRef": "財務.売上単価",
+              "nativeQueryRef": "売上単価"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "財務"
+                    }
+                  },
+                  "Property": "利益単価"
+                }
+              },
+              "queryRef": "財務.利益単価",
+              "nativeQueryRef": "利益単価"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "財務"
+                  }
+                },
+                "Property": "売上単価"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8bd067f14480710babe0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "日付"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "badff33085d8be3109d8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "日付"
+              }
+            },
+            "Property": "Month"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c0cfd780d52e623133c0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "財務"
+              }
+            },
+            "Property": "売上単価"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "99f1925a8e591306c3c1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "財務"
+              }
+            },
+            "Property": "利益単価"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

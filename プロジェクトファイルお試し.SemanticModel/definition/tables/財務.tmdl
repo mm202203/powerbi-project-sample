@@ -1,6 +1,35 @@
 table 財務
 	lineageTag: 671564c8-2c7a-46f9-bc99-745d4ee5e71f
 
+	measure 総利益 = SUM('財務'[Profit])
+		lineageTag: 84168670-cd52-4821-9654-5e1b9b7eee8f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 総売上 = SUM('財務'[Sales])
+		lineageTag: d8bcb4ca-4624-4ae4-9c4e-d8691817f466
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 販売額合計 = SUM('財務'[Sale Price])
+		formatString: 0
+		lineageTag: f12fe350-94b9-4f45-9779-42901297dcfa
+
+	measure 数量 = SUM('財務'[Units Sold])
+		lineageTag: 14d3dddb-9fff-4a47-b51b-c2e33560a203
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 売上単価 = DIVIDE([総売上], [数量], BLANK())
+		lineageTag: 627f1fe9-bbee-457e-a3ea-90bb006ed2d8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 利益単価 = DIVIDE([総利益], [数量], BLANK())
+		lineageTag: 3aef43e3-246d-4d75-8ab1-0a4062966f5e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Segment
 		dataType: string
 		lineageTag: 4ae4f203-b511-4bcb-afec-75d49b349201
